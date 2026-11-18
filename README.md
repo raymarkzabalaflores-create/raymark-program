@@ -33,7 +33,7 @@ def passenger_registration():
 
     if name == "" or contact == "":
         print("Please Complete all Information.")
-        return
+        exit() 
 
     passenger = {"name": name, "contact": contact }
 
@@ -52,7 +52,7 @@ def booking_taxee():
 
     if len(passengers) == 0:
         print("Please Register First.")
-        return
+        exit() 
 
     name = input("Enter Registered Passenger Name: ")
     passenger_fount = None
@@ -64,7 +64,7 @@ def booking_taxee():
 
     if passenger_fount is None:
         print("passenger not found. Please register.")
-        return
+        exit() 
 
 print("\n========== TRAVEL INFORMATION =========")
 
@@ -198,3 +198,4 @@ while True:
     else:
         print("Invalid Choice!")
         print("Please select from 1 to 5.")
+        exit() 
